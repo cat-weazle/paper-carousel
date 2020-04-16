@@ -3,6 +3,9 @@
   "description": "The paper-carousel element updated for Polymer 3",
   "main": "paper-carousel.js",
   "dependencies": {
+    "@polymer/iron-icons": "^3.0.1",
+    "@polymer/iron-resizable-behavior": "^3.0.1",
+    "@polymer/paper-styles": "^3.0.1",
     "@polymer/polymer": "^3.0.0"
   },
   "devDependencies": {
