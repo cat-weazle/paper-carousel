@@ -765,16 +765,17 @@ class PaperCarousel extends PolymerElement {
     prevLink.classList.add('paper-carousel_controls_arrow-prev');
 
     // Click anchors event
-    nextLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      return paperCarouselElement._disableAutoPlay();
+    nextLink.addEventListener('click', event => {
+      event.preventDefault();
+      paperCarouselElement._disableAutoPlay();
+      element.goToNextItem(event);
     });
-    prevLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      return paperCarouselElement._disableAutoPlay();
+    prevLink.addEventListener('click', event => {
+      event.preventDefault();
+      paperCarouselElement._disableAutoPlay();
+      element.goToPrevItem(event);
     });
-    nextLink.addEventListener('tap', event => element.goToNextItem(event));
-    prevLink.addEventListener('tap', event => element.goToPrevItem(event));
+
     // parse container
     nextLink.appendChild(nextLinkIcon);
     prevLink.appendChild(prevLinkIcon);
