@@ -17,6 +17,7 @@
     "wct-mocha": "^1.0.1"
   },
   "scripts": {
+    "serve": "polymer serve",
     "test": "polymer test -l chrome"
   }
 }

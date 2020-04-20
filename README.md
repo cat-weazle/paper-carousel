@@ -1,6 +1,6 @@
 # \<paper-carousel\>
 
-The paper-carousel element updated for Polymer 3
+This repository contains an updated version of the [paper-carousel Polymer element by Redbility](https://github.com/Redbility/paper-carousel). The element has been updated from a Polymer 1/2 element to a Polymer 3 element. Pull requests will be reviewed and merged.
 
 ## Install the Polymer-CLI
 
@@ -18,4 +18,7 @@ $ polymer serve
 $ polymer test
 ```
 
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+## ToDo
+* Improve readability by splitting up large functions into smaller functions
+* Add more tests
+* When looping show first elements directly after last element
