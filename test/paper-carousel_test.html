@@ -22,9 +22,16 @@
       </template>
     </test-fixture>
 
-    <test-fixture id="ChangedPropertyTestFixture">
+    <test-fixture id="DemoTestFixture">
       <template>
-        <paper-carousel prop1="new-prop1"></paper-carousel>
+        <paper-carousel items="3" responsive="600:2, 460:1" controls="true" dots="true">
+          <div class="paper-carousel-demo-indigo" data-text="#1"></div>
+          <div class="paper-carousel-demo-pink" data-text="#2"></div>
+          <div class="paper-carousel-demo-teal" data-text="#3"></div>
+          <div class="paper-carousel-demo-amber" data-text="#4"></div>
+          <div class="paper-carousel-demo-blue" data-text="#5"></div>
+          <div class="paper-carousel-demo-green" data-text="#6"></div>
+        </paper-carousel>
       </template>
     </test-fixture>
 
@@ -33,20 +40,35 @@
 
         test('instantiating the element with default properties works', () => {
           const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'paper-carousel');
-          const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello paper-carousel!');
+          assert.equal(element.items, 1);
+          assert.equal(element.responsive, null);
+          assert.equal(element.controls, false);
+          assert.equal(element.dots, false);
+          assert.equal(element.dotText, false);
+          assert.equal(element.prevIcon, 'image:navigate-before');
+          assert.equal(element.nextIcon, 'image:navigate-next');
+          assert.equal(element.loop, false);
+          assert.equal(element.autoplay, false);
+          assert.equal(element.autoplaytime, 6000);
+          assert.equal(element.transitionspeed, 500);
         });
 
-        test('setting a property on the element works', () => {
-          // Create a test fixture
-          const element = fixture('ChangedPropertyTestFixture');
-          assert.equal(element.prop1, 'new-prop1');
-          const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello new-prop1!');
+        test('instantiating the demo element with custom properties works', () => {
+          const element = fixture('DemoTestFixture');
+          assert.equal(element.items, 3);
+          assert.equal(element.responsive, '600:2, 460:1');
+          assert.equal(element.controls, true);
+          assert.equal(element.dots, true);
+          assert.equal(element.dotText, false);
+          assert.equal(element.prevIcon, 'image:navigate-before');
+          assert.equal(element.nextIcon, 'image:navigate-next');
+          assert.equal(element.loop, false);
+          assert.equal(element.autoplay, false);
+          assert.equal(element.autoplaytime, 6000);
+          assert.equal(element.transitionspeed, 500);
         });
+
+        // ToDo: Write additional tests
 
       });
     </script>

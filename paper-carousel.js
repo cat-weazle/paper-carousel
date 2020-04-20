@@ -247,15 +247,15 @@ class PaperCarousel extends PolymerElement {
       },
       controls: {
         type: Boolean,
-        value: true
+        value: false
       },
       dots: {
         type: Boolean,
-        value: true
+        value: false
       },
       dotText: {
         type: Boolean,
-        value: true
+        value: false
       },
       prevIcon: {
         type: String,
@@ -270,7 +270,8 @@ class PaperCarousel extends PolymerElement {
         value: false
       },
       autoplay: {
-        type: Boolean
+        type: Boolean,
+        value: false
       },
       autoplaytime: {
         type: Number,
