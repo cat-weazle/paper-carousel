@@ -1,6 +1,6 @@
 # \<paper-carousel\>
 
-This repository contains an updated version of the [paper-carousel Polymer element by Redbility](https://github.com/Redbility/paper-carousel). The element has been updated from a Polymer 1/2 element to a Polymer 3 element. Pull requests will be reviewed and merged.
+This repository contains an updated version of the [paper-carousel Polymer element by Redbility](https://github.com/Redbility/paper-carousel). The element has been updated from a Polymer 1/2 element to a Polymer 3 element.
 
 ## Install the Polymer-CLI
 

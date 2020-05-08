@@ -1,6 +1,8 @@
 {
   "name": "paper-carousel",
-  "description": "The paper-carousel element updated for Polymer 3",
+  "description": "A carousel element for Polymer 3 applications",
+  "author": "Erik van den Hoorn <erik@vandenhoorn.nu>",
+  "version": "1.0.0",
   "main": "paper-carousel.js",
   "dependencies": {
     "@polymer/iron-icons": "^3.0.1",
