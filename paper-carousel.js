@@ -5,7 +5,7 @@ import "@polymer/paper-styles/color";
 
 /**
  * `paper-carousel`
- * The paper-carousel element updated for Polymer 3
+ * A carousel element for Polymer 3 applications
  *
  * @customElement
  * @polymer
