@@ -11,6 +11,10 @@ First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polyme
 ```
 $ polymer serve
 ```
+Ctrl + click on the "reusable components" url. This url should look something like this:
+```
+http://127.0.0.1:8081/components/paper-carousel/
+```
 
 ## Running Tests
 
