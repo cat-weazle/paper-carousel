@@ -296,7 +296,7 @@ class PaperCarousel extends PolymerElement {
   connectedCallback() {
     super.connectedCallback();
     const element = this;
-    window.addEventListener('resize', element._onResize);
+    window.addEventListener('resize', element._onResize.bind(element));
     element._onLoad();
   }
 
@@ -304,7 +304,7 @@ class PaperCarousel extends PolymerElement {
     const element = this;
     super.disconnectedCallback();
     // We must remove listeners to prevent memory leaks.
-    window.removeEventListener('resize', element._onResize);
+    window.removeEventListener('resize', element._onResize.bind(element));
   }
 
   getItems() {
