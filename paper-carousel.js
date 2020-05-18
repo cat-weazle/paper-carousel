@@ -410,7 +410,7 @@ class PaperCarousel extends PolymerElement {
     } else {
       for (let i = 0; i < items.length; i++) {
         const child = items[i];
-        if (child.localName !== 'template') {
+        if (child.localName !== 'template' && child.localName !== 'dom-repeat') {
           totalItems++;
         }
       }
@@ -427,7 +427,7 @@ class PaperCarousel extends PolymerElement {
     //set item number
     for (let i = 0; i < items.length; i++) {
       const child = items[i];
-      if (child.localName !== 'template') {
+      if (child.localName !== 'template' && child.localName !== 'dom-repeat') {
         totalItems++;
       }
     }
@@ -678,7 +678,7 @@ class PaperCarousel extends PolymerElement {
     } else {
       containerWidth = moduleRect.width * element.getTotalItems() / element.getItems();
     }
-    if (element._isLoop) {
+    if (element._isLoop()) {
       childWidth = Math.round(100 / element._getRealTotalItems() * 10000) / 10000;
     } else {
       childWidth = Math.round(100 / element.getTotalItems() * 10000) / 10000;
