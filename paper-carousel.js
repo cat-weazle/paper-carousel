@@ -187,46 +187,6 @@ class PaperCarousel extends PolymerElement {
           border-radius: 8px;
       }
 
-      :host ::slotted([class*=paper-carousel-demo]) {
-          position: relative;
-          height: 400px;
-      }
-
-      :host ::slotted([class*=paper-carousel-demo]::before) {
-          position: absolute;
-          content: attr(data-text);
-          color: var(--dot-background-color);
-          font-size: 3rem;
-          font-weight: bold;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-                  transform: translate(-50%, -50%);
-      }
-
-      :host ::slotted(.paper-carousel-demo-indigo) {
-          background-color: var(--paper-indigo-500);
-      }
-
-      :host ::slotted(.paper-carousel-demo-pink) {
-          background-color: var(--paper-pink-500);
-      }
-
-      :host ::slotted(.paper-carousel-demo-teal) {
-          background-color: var(--paper-teal-500);
-      }
-
-      :host ::slotted(.paper-carousel-demo-amber) {
-          background-color: var(--paper-amber-500);
-      }
-
-      :host ::slotted(.paper-carousel-demo-green) {
-          background-color: var(--paper-green-500);
-      }
-
-      :host ::slotted(.paper-carousel-demo-blue) {
-          background-color: var(--paper-blue-500);
-      }
 
       </style>
       <div class="paper-carousel_container">

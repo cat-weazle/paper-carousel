@@ -14,27 +14,46 @@
     </script>
 
     <script type="module" src="../paper-carousel.js"></script>
+    <script src='./demo.js'></script>
 
     <custom-style>
       <style is="custom-style" include="demo-pages-shared-styles">
       </style>
     </custom-style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
   </head>
   <body>
     <div class="vertical-section-container centered" style="max-width: 800px">
+      
       <h3>Basic paper-carousel demo</h3>
       <demo-snippet>
         <template>
-          <paper-carousel id="paperCarouselDemo" items="3" responsive="600:2, 460:1" controls="true" dots="true" dotText="false" autoplay="false" loop="false">
-            <div class="paper-carousel-demo-indigo" data-text="#1"></div>
-            <div class="paper-carousel-demo-pink" data-text="#2"></div>
-            <div class="paper-carousel-demo-teal" data-text="#3"></div>
-            <div class="paper-carousel-demo-amber" data-text="#4"></div>
-            <div class="paper-carousel-demo-blue" data-text="#5"></div>
-            <div class="paper-carousel-demo-green" data-text="#6"></div>
+          <paper-carousel id="basicPaperCarouselDemo" items="3" responsive="600:2, 460:1" controls="true" dots="true" dotText="false" autoplay="false" loop="false">
+            <div class="paper-carousel-demo indigo" data-text="#1"></div>
+            <div class="paper-carousel-demo pink" data-text="#2"></div>
+            <div class="paper-carousel-demo teal" data-text="#3"></div>
+            <div class="paper-carousel-demo amber" data-text="#4"></div>
+            <div class="paper-carousel-demo blue" data-text="#5"></div>
+            <div class="paper-carousel-demo green" data-text="#6"></div>
           </paper-carousel>
         </template>
       </demo-snippet>
+
+      <h3>Using dom-repeat</h3>
+      <demo-snippet>
+        <template>
+          <paper-carousel id="domRepeatPaperCarouselDemo" items="3" responsive="600:2, 460:1" controls="true" dots="true" dotText="false" autoplay="false" loop="false">
+            <dom-repeat>
+              <template>
+                <!-- ToDo: check why data-text is not set -->
+                <div class$="paper-carousel-demo [[item.color]]" data-text="[[item.text]]">[[item.text]]</div>
+              </template>
+            </dom-repeat>
+          </paper-carousel>
+        </template>
+      </demo-snippet>
+
     </div>
   </body>
 </html>
