@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         {text: '#5', color: 'blue'},
         {text: '#6', color: 'green'}
     ];
-    const domRepeatPaperCarouselDemo = document.getElementById('domRepeatPaperCarouselDemo');
+    const domRepeatDemo = document.getElementById('domRepeatDemo');
     setTimeout(() => {
-        domRepeatPaperCarouselDemo.refresh();
+        domRepeatDemo.refresh();
     }, 1000)
 });

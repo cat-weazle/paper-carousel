@@ -55,7 +55,7 @@ class PaperCarousel extends PolymerElement {
       :host .paper-carousel_controls {
           position: absolute;
           width: auto;
-          top: 50%;
+          top: var(--vertical-align-controls, 50%);;
           right: 10px;
           left: 10px;
           -webkit-transform: translateY(-50%);
