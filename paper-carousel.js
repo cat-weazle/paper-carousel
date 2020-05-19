@@ -17,7 +17,7 @@ class PaperCarousel extends PolymerElement {
     return html`
       <style>
       :host {
-          display: block;
+          display: flex;
           position: relative;
           overflow: hidden;
           --dot-background-color: #ffffff;
